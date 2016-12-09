@@ -1,10 +1,10 @@
-package Sah::Schema::aos;
+package Sah::Schema::hos;
 
 # DATE
 # VERSION
 
-our $schema = [array => {
-    summary => 'Array of strings',
+our $schema = [hash => {
+    summary => 'Hash of strings',
     description => <<'_',
 
 Note that for flexibility, the strings are allowed to be undefs.

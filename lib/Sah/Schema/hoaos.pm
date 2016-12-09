@@ -1,16 +1,16 @@
-package Sah::Schema::aos;
+package Sah::Schema::hoaos;
 
 # DATE
 # VERSION
 
-our $schema = [array => {
-    summary => 'Array of strings',
+our $schema = [hash => {
+    summary => 'Hash of array-of-strings',
     description => <<'_',
 
 Note that for flexibility, the strings are allowed to be undefs.
 
 _
-    of => ['str', {}, {}],
+    of => ['aos', {req=>1}, {}],
 }, {}];
 
 1;
