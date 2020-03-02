@@ -31,4 +31,4 @@ _
 
 =head1 SEE ALSO
 
-L<Sah::Schema::aoaoms> (array of (defined-)arrays-of-maybe-strings).
+L<Sah::Schema::aoaos> (array of (defined-)arrays-of-(defined-)strings).
