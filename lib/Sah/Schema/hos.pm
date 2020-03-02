@@ -18,6 +18,7 @@ _
         {data=>{k=>'a'}, valid=>1},
         {data=>{k=>undef}, valid=>0},
         {data=>{k=>'a', k2=>[]}, valid=>0},
+        {data=>{k=>'a', k2=>{}}, valid=>0},
     ],
 }, {}];
 

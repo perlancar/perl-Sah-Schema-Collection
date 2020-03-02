@@ -28,3 +28,7 @@ _
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Sah::Schema::aohoms> (array of (defined-)hashes-of-maybe-strings).
