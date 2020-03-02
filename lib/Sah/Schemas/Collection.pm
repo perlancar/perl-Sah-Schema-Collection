@@ -1,6 +1,8 @@
 package Sah::Schemas::Collection;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 1;
