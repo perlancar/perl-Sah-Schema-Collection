@@ -1,4 +1,4 @@
-package Sah::Schema::hoaos;
+package Sah::Schema::hoaoms;
 
 # AUTHORITY
 # DATE
@@ -6,11 +6,11 @@ package Sah::Schema::hoaos;
 # VERSION
 
 our $schema = [hash => {
-    summary => 'Hash of (defined-)array-of-(defined-)strings',
+    summary => 'Hash of (defined-)array-of-(maybe-)strings',
     description => <<'_',
 
 _
-    of => ['aos', {req=>1}, {}],
+    of => ['aoms', {req=>1}, {}],
     examples => [
         {data=>'a', valid=>0},
         {data=>[], valid=>0},
@@ -22,7 +22,7 @@ _
         {data=>{k=>[], k2=>['a']}, valid=>1},
         {data=>{k=>[], k2=>[[]]}, valid=>0},
         {data=>{k=>[], k2=>[{}]}, valid=>0},
-        {data=>{k=>[], k2=>[undef]}, valid=>0},
+        {data=>{k=>[], k2=>[undef]}, valid=>1},
     ],
 }, {}];
 
@@ -31,4 +31,4 @@ _
 
 =head1 SEE ALSO
 
-L<Sah::Schema::hoaoms> (hash of (defined-)arrays-of-maybe-strings).
+L<Sah::Schema::hoaos> (hash of (defined-)arrays-of-(defined-)-strings).

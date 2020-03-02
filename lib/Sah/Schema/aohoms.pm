@@ -1,4 +1,4 @@
-package Sah::Schema::aohos;
+package Sah::Schema::aohoms;
 
 # AUTHORITY
 # DATE
@@ -6,11 +6,11 @@ package Sah::Schema::aohos;
 # VERSION
 
 our $schema = [array => {
-    summary => 'Array of (defined-)hash-of-(defined-)strings',
+    summary => 'Array of (defined-)hash-of-maybe-strings',
     description => <<'_',
 
 _
-    of => ['hos', {req=>1}, {}],
+    of => ['homs', {req=>1}, {}],
     examples => [
         {data=>'a', valid=>0},
         {data=>[], valid=>1},
@@ -22,9 +22,13 @@ _
         {data=>[{}, {k=>'a'}], valid=>1},
         {data=>[{}, {k=>[]}], valid=>0},
         {data=>[{}, {k=>{}}], valid=>0},
-        {data=>[{}, {k=>undef}], valid=>0},
+        {data=>[{}, {k=>undef}], valid=>1},
     ],
 }, {}];
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<Sah::Schema::aohos> (array of (defined-)hashes-of-(defined-)strings).

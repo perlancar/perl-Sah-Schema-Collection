@@ -1,4 +1,4 @@
-package Sah::Schema::aoaos;
+package Sah::Schema::aoaoms;
 
 # AUTHORITY
 # DATE
@@ -6,11 +6,11 @@ package Sah::Schema::aoaos;
 # VERSION
 
 our $schema = [array => {
-    summary => 'Array of (defined-)array-of-(defined-)strings',
+    summary => 'Array of (defined-)array-of-maybe-strings',
     description => <<'_',
 
 _
-    of => ['aos', {req=>1}, {}],
+    of => ['aoms', {req=>1}, {}],
     examples => [
         {data=>'a', valid=>0},
         {data=>[], valid=>1},
@@ -22,7 +22,7 @@ _
         {data=>[['a'], []], valid=>1},
         {data=>[['a','b'], []], valid=>1},
         {data=>[['a',[]], []], valid=>0},
-        {data=>[[undef], []], valid=>0},
+        {data=>[[undef], []], valid=>1},
     ],
 }, {}];
 
@@ -31,4 +31,4 @@ _
 
 =head1 SEE ALSO
 
-L<Sah::Schema::aoaoms> (array of arrays-of-maybe-strings).
+L<Sah::Schema::aoaoms> (array of (defined-)arrays-of-maybe-strings).

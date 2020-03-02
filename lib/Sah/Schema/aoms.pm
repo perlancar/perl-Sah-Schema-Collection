@@ -1,4 +1,4 @@
-package Sah::Schema::aos;
+package Sah::Schema::aoms;
 
 # AUTHORITY
 # DATE
@@ -6,19 +6,17 @@ package Sah::Schema::aos;
 # VERSION
 
 our $schema = [array => {
-    summary => 'Array of (defined) strings',
+    summary => 'Array of maybe-strings',
     description => <<'_',
 
-The elements (strings) of the array must be defined.
-
 _
-    of => ['str', {req=>1}, {}],
+    of => ['str', {}, {}],
     examples => [
         {data=>'a', valid=>0},
         {data=>[], valid=>1},
         {data=>{}, valid=>0},
         {data=>['a'], valid=>1},
-        {data=>[undef], valid=>0},
+        {data=>[undef], valid=>1},
         {data=>['a', []], valid=>0},
         {data=>[['a']], valid=>0},
     ],
@@ -29,5 +27,5 @@ _
 
 =head1 SEE ALSO
 
-L<Sah::Schema::aoms> (array of maybe-strings) where the elements of the array
-are allowed to be undefs.
+L<Sah::Schema::aos> (array of (defined) strings) where the elements of the array
+are not allowed to be undefs.

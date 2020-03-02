@@ -1,4 +1,4 @@
-package Sah::Schema::hohos;
+package Sah::Schema::hohoms;
 
 # AUTHORITY
 # DATE
@@ -6,11 +6,11 @@ package Sah::Schema::hohos;
 # VERSION
 
 our $schema = [hash => {
-    summary => 'Hash of (defined-)hash-of-(defined-)strings',
+    summary => 'Hash of (defined-)hash-of-maybe-strings',
     description => <<'_',
 
 _
-    of => ['hos', {req=>1}, {}],
+    of => ['homs', {req=>1}, {}],
     examples => [
         {data=>'a', valid=>0},
         {data=>[], valid=>0},
@@ -22,7 +22,7 @@ _
         {data=>{k=>{}, k2=>{k=>'a'}}, valid=>1},
         {data=>{k=>{}, k2=>{k=>[]}}, valid=>0},
         {data=>{k=>{}, k2=>{k=>{}}}, valid=>0},
-        {data=>{k=>{}, k2=>{k=>undef}}, valid=>0},
+        {data=>{k=>{}, k2=>{k=>undef}}, valid=>1},
     ],
 }, {}];
 
@@ -31,4 +31,4 @@ _
 
 =head1 SEE ALSO
 
-L<Sah::Schema::hohoms> (hash of (defined-)hashes-of-(maybe-)-strings).
+L<Sah::Schema::hohos> (hash of (defined-)hashes-of-(defined-)-strings).
