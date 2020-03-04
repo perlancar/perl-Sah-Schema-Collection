@@ -12,13 +12,13 @@ our $schema = [array => {
 _
     of => ['str', {}, {}],
     examples => [
-        {data=>'a', valid=>0},
-        {data=>[], valid=>1},
-        {data=>{}, valid=>0},
-        {data=>['a'], valid=>1},
-        {data=>[undef], valid=>1},
-        {data=>['a', []], valid=>0},
-        {data=>[['a']], valid=>0},
+        {value=>'a', valid=>0},
+        {value=>[], valid=>1},
+        {value=>{}, valid=>0},
+        {value=>['a'], valid=>1},
+        {value=>[undef], valid=>1},
+        {value=>['a', []], valid=>0},
+        {value=>[['a']], valid=>0},
     ],
 }, {}];
 

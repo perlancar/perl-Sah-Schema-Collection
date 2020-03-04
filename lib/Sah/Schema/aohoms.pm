@@ -12,17 +12,17 @@ our $schema = [array => {
 _
     of => ['homs', {req=>1}, {}],
     examples => [
-        {data=>'a', valid=>0},
-        {data=>[], valid=>1},
-        {data=>{}, valid=>0},
-        {data=>[undef], valid=>0},
-        {data=>['a'], valid=>0},
-        {data=>[[]], valid=>0},
-        {data=>[{}], valid=>1},
-        {data=>[{}, {k=>'a'}], valid=>1},
-        {data=>[{}, {k=>[]}], valid=>0},
-        {data=>[{}, {k=>{}}], valid=>0},
-        {data=>[{}, {k=>undef}], valid=>1},
+        {value=>'a', valid=>0},
+        {value=>[], valid=>1},
+        {value=>{}, valid=>0},
+        {value=>[undef], valid=>0},
+        {value=>['a'], valid=>0},
+        {value=>[[]], valid=>0},
+        {value=>[{}], valid=>1},
+        {value=>[{}, {k=>'a'}], valid=>1},
+        {value=>[{}, {k=>[]}], valid=>0},
+        {value=>[{}, {k=>{}}], valid=>0},
+        {value=>[{}, {k=>undef}], valid=>1},
     ],
 }, {}];
 

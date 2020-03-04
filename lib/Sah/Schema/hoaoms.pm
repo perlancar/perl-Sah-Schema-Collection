@@ -12,17 +12,17 @@ our $schema = [hash => {
 _
     of => ['aoms', {req=>1}, {}],
     examples => [
-        {data=>'a', valid=>0},
-        {data=>[], valid=>0},
-        {data=>{}, valid=>1},
-        {data=>{k=>undef}, valid=>0},
-        {data=>{k=>'a'}, valid=>0},
-        {data=>{k=>[]}, valid=>1},
-        {data=>{k=>{}}, valid=>0},
-        {data=>{k=>[], k2=>['a']}, valid=>1},
-        {data=>{k=>[], k2=>[[]]}, valid=>0},
-        {data=>{k=>[], k2=>[{}]}, valid=>0},
-        {data=>{k=>[], k2=>[undef]}, valid=>1},
+        {value=>'a', valid=>0},
+        {value=>[], valid=>0},
+        {value=>{}, valid=>1},
+        {value=>{k=>undef}, valid=>0},
+        {value=>{k=>'a'}, valid=>0},
+        {value=>{k=>[]}, valid=>1},
+        {value=>{k=>{}}, valid=>0},
+        {value=>{k=>[], k2=>['a']}, valid=>1},
+        {value=>{k=>[], k2=>[[]]}, valid=>0},
+        {value=>{k=>[], k2=>[{}]}, valid=>0},
+        {value=>{k=>[], k2=>[undef]}, valid=>1},
     ],
 }, {}];
 

@@ -12,13 +12,13 @@ our $schema = [hash => {
 _
     of => ['str', {}, {}],
     examples => [
-        {data=>'a', valid=>0},
-        {data=>[], valid=>0},
-        {data=>{}, valid=>1},
-        {data=>{k=>'a'}, valid=>1},
-        {data=>{k=>undef}, valid=>1},
-        {data=>{k=>'a', k2=>[]}, valid=>0},
-        {data=>{k=>'a', k2=>{}}, valid=>0},
+        {value=>'a', valid=>0},
+        {value=>[], valid=>0},
+        {value=>{}, valid=>1},
+        {value=>{k=>'a'}, valid=>1},
+        {value=>{k=>undef}, valid=>1},
+        {value=>{k=>'a', k2=>[]}, valid=>0},
+        {value=>{k=>'a', k2=>{}}, valid=>0},
     ],
 }, {}];
 
